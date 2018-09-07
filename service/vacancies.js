@@ -1,3 +1,5 @@
+var employerService = require('./employers');
+
 var vacancies = [
   {
     id: 0,
@@ -64,7 +66,16 @@ var vacancies = [
 var lastId = 5;
 
 function get() {
-  return vacancies;
+  const employers = employerService.get().reduce(
+    (result, item) => {
+      result[item.id] = item;
+      return result;
+    },
+    {}
+  );
+  return vacancies.map(
+    item => ({...item, employerName: employers[item.employerId].name})
+  );
 }
 
 function getByEmployerId(employerId) {

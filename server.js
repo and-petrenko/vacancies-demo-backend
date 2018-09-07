@@ -67,6 +67,6 @@ app.put('/vacancies/:id', function(req, res) {
   res.send(vacancyService.update(req.params.id, req.body));
 });
 
-app.listen(PORT, function() {
+app.listen(PORT, '192.168.0.58', function() {
   console.log(`Application started on port ${PORT}`);
 });
