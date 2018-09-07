@@ -5,7 +5,7 @@ var vacancies = [
     title: 'Title #01',
     description: 'Description #06',
     requirements: 'I want all and now!',
-    experience: 'Experiences.',
+    experience: '0',
     place: 'Some place',
     tags: ['tag2', 'tag1', 'tag3']
   },
@@ -15,7 +15,7 @@ var vacancies = [
     title: 'Title #02',
     description: 'Description #05',
     requirements: 'I want all and now!',
-    experience: 'Experiences.',
+    experience: '1-2',
     place: 'Some place',
     tags: ['tag2', 'tag1', 'tag3']
   },
@@ -25,7 +25,7 @@ var vacancies = [
     title: 'Title #03',
     description: 'Description #04',
     requirements: 'I want all and now!',
-    experience: 'Experiences.',
+    experience: '1-2',
     place: 'Some place',
     tags: ['tag2', 'tag1', 'tag3']
   },
@@ -35,7 +35,7 @@ var vacancies = [
     title: 'Title #04',
     description: 'Description #03',
     requirements: 'I want all and now!',
-    experience: 'Experiences.',
+    experience: '3-4',
     place: 'Some place',
     tags: ['tag2', 'tag1', 'tag3']
   },
@@ -45,7 +45,7 @@ var vacancies = [
     title: 'Title #05',
     description: 'Description #02',
     requirements: 'I want all and now!',
-    experience: 'Experiences.',
+    experience: '5-6',
     place: 'Some place',
     tags: ['tag2', 'tag1', 'tag3']
   },
@@ -55,7 +55,7 @@ var vacancies = [
     title: 'Title #06',
     description: 'Description #01',
     requirements: 'I want all and now!',
-    experience: 'Experiences.',
+    experience: '7+',
     place: 'Some place',
     tags: ['tag2', 'tag1', 'tag3']
   }
