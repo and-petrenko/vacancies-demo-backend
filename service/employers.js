@@ -22,23 +22,22 @@ var employers = [
     name: 'Philips',
     location: 'Haifa',
     logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Philips_logo.svg/1280px-Philips_logo.svg.png'
+  },
+  {
+    id: 5,
+    name: 'Zara',
+    location: 'Haifa',
+    logo: 'https://avatanplus.com/files/resources/original/58a8bf26f126d15a532ab04c.png'
+  },
+  {
+    id: 6,
+    name: 'Google',
+    location: 'Haifa',
+    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/1280px-Google_2015_logo.svg.png'
   }
-  // ,{
-  //   id: 5,
-  //   name: 'Zara',
-  //   location: 'Haifa',
-  //   logo: 'https://avatanplus.com/files/resources/original/58a8bf26f126d15a532ab04c.png'
-  // },
-  // {
-  //   id: 6,
-  //   name: 'Google',
-  //   location: 'Haifa',
-  //   logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/1280px-Google_2015_logo.svg.png'
-  // }
 ];
 
-// var lastId = 6;
-var lastId = 4;
+var lastId = 6;
 
 function get() {
   return employers;
