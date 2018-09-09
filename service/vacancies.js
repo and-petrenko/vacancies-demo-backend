@@ -66,7 +66,31 @@ var vacancies = [
 // var lastId = 6;
 var lastId = 4;
 
-function get() {
+function filterVacancy(vacancy, filter) {
+  const title = (filter.title || '').trim();
+  if (title && vacancy.title.indexOf(title) < 0) {
+    return false;
+  }
+  const description = (filter.description || '').trim();
+  if (description && vacancy.description.indexOf(description) < 0) {
+    return false;
+  }
+  const requirements = (filter.requirements || '').trim();
+  if (requirements && vacancy.requirements.indexOf(requirements) < 0) {
+    return false;
+  }
+  const experience = (filter.experience || '').trim();
+  if (experience && vacancy.experience.indexOf(experience) < 0) {
+    return false;
+  }
+  const place = (filter.place || '').trim();
+  if (place && vacancy.place.indexOf(place) < 0) {
+    return false;
+  }
+  return true;
+}
+
+function mapVacancies(vacancies) {
   const employers = employerService.get().reduce(
     (result, item) => {
       result[item.id] = item;
@@ -76,6 +100,18 @@ function get() {
   );
   return vacancies.map(
     item => ({...item, employerName: employers[item.employerId].name})
+  );
+}
+
+function get() {
+  return mapVacancies(vacancies);
+}
+
+function filterVacancies(filter) {
+  return mapVacancies(
+    vacancies.filter(
+      vacancy => filterVacancy(vacancy, filter)
+    )
   );
 }
 
@@ -113,6 +149,7 @@ function update(id, item) {
 
 module.exports = {
   get,
+  filterVacancies,
   getByEmployerId,
   getById,
   add,

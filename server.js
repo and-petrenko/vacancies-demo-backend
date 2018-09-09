@@ -55,6 +55,10 @@ app.get('/vacancies/:id', function(req, res) {
   }
 });
 
+app.post('/filterVacancies', function(req, res) {
+  res.send(vacancyService.filterVacancies(req.body));
+});
+
 app.post('/vacancies', function(req, res) {
   res.send(vacancyService.add(req.body));
 });
